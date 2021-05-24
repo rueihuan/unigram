@@ -13,7 +13,7 @@ try {
 
 try {
   if (!fs.existsSync("tmp/freq.json"))
-    throw new Error("tmp/freq.json not found");
+    throw new Error("tmp/freq.json Not Found");
 
   fs.copyFileSync("tmp/freq.json", "dist/index.js");
 
