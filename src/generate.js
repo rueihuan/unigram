@@ -4,9 +4,7 @@ const fs = require("fs");
 const folderName = "tmp";
 
 try {
-  if (!fs.existsSync(folderName)) {
-    fs.mkdirSync(folderName);
-  }
+  if (!fs.existsSync(folderName)) fs.mkdirSync(folderName);
 } catch (err) {
   console.error(err);
 }
