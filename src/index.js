@@ -16,9 +16,10 @@ try {
     throw new Error("tmp/freq.json Not Found");
 
   fs.copyFileSync("tmp/freq.json", "dist/index.js");
+  fs.copyFileSync("src/index.d.ts", "dist/index.d.ts");
 
   (async () => {
-    await prependFile("dist/index.js", "module.exports = ");
+    await prependFile("dist/index.js", "exports.unigram = ");
   })();
 } catch (err) {
   console.error(err);
